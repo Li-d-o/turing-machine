@@ -19,20 +19,20 @@ Compile the java files with javac *.java, and the main method is in main.java fo
 *anbncn.txt       - a machine that shows decides a^nb^nc^n
 
 ## Input File Format:
-Line 1: Set of states, separated by a comma (no spaces unless part of of state name)
-Line 2: Set of characters in the alphabet, separated by comma (char must be first item in row, ex. b,a will read b and a, but b, a will read b and space)
-Line 3: The tape, represented by a string. Note that I use $ as a symbol to represent the end of a string for each file, and though this isn't necessary, any custom tape of these must end with $
-Line 4: Initial state, accept state, reject state; in that order, no spaces (unless part of state name)
+Line 1: Set of states, separated by a comma (no spaces unless part of of state name) \
+Line 2: Set of characters in the alphabet, separated by comma (char must be first item in row, ex. b,a will read b and a, but b, a will read b and space) \
+Line 3: The tape, represented by a string. Note that I use $ as a symbol to represent the end of a string for each file, and though this isn't necessary, any custom tape of these must end with $ \
+Line 4: Initial state, accept state, reject state; in that order, no spaces (unless part of state name) \
 Lines 5-end: Transitions, listed as cur_state, cur_char, next_state, changed_char, direction. Put $ if no change is desired; 1 is right, 0 is left for direction
 
-Here is even_a for an example:
-Even,Odd,Accept,Reject
-a,$
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$
-Even,Accept,Reject
-Even,a,Odd,$,1
-Odd,a,Even,$,1
-Even,$,Accept,$,1
+Here is even_a for an example: \
+Even,Odd,Accept,Reject \
+a,$ \
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$ \
+Even,Accept,Reject \
+Even,a,Odd,$,1 \
+Odd,a,Even,$,1 \
+Even,$,Accept,$,1 \
 Odd,$,Reject,$,1
 
 ## Sources:
